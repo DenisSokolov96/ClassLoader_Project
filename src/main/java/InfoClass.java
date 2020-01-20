@@ -29,38 +29,27 @@ public class InfoClass {
         tab("\n", t);
         tab(cl+"\n", t);
         tab("Родительский класс: " + cl.getSuperclass()+"\n",t);
-        //str.append("\n");
-        //str.append(cl+"\n");
-        //str.append("Родительский класс: " + cl.getSuperclass()+"\n");
 
         if ( cl.getInterfaces().length > 0) {
-            //str.append("Интерфейсы класса:"+"\n");
             tab("Интерфейсы класса:\n",t);
             print(cl.getInterfaces(), t);
         }
         if ( cl.getConstructors().length > 0){
-            //str.append("Конструкторы класса:"+"\n");
             tab("Конструкторы класса:\n", t);
             for (Constructor c: cl.getConstructors())
-                //str.append(c.getName()+"\n");
                 tab(c.getName()+"\n", t);
         }
         if ( cl.getDeclaredFields().length > 0) {
-            //str.append("Поля класса:"+"\n");
             tab("Поля класса:"+"\n", t);
             for (Field f: cl.getDeclaredFields())
-                //str.append(f.getName()+"\n");
                 tab(f.getName()+"\n", t);
         }
         if ( cl.getDeclaredMethods().length > 0){
-            //str.append("Методы класса:"+"\n");
             tab("Методы класса:"+"\n", t);
             for (Method m: cl.getDeclaredMethods())
-                //str.append(m.getName()+"\n");
                 tab(m.getName()+"\n", t);
         }
         tab("**********************************************\n",t);
-        //str.append("**************************************************\n");
 
         if (cl.getSuperclass()!=null) getClassInfo(cl.getSuperclass(), t);
         if (cl.getInterfaces()!=null) getInterfaceInfo(cl.getInterfaces(), t);
@@ -80,7 +69,6 @@ public class InfoClass {
 
     public void print(Object[] masObj, int t){
         for (int i = 0; i < masObj.length; i++) {
-            //str.append(masObj[i].toString()+"\n");
             tab(masObj[i].toString()+"\n", t);
         }
     }

@@ -1,4 +1,9 @@
+import java.lang.reflect.InvocationTargetException;
+
 public interface IMyClass {
 
-    void Out(String name);
+    public void Out(String name);
+    public String get() throws InvocationTargetException, IllegalAccessException;
+
+    public void set(String val);
 }
